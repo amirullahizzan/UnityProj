@@ -8,11 +8,14 @@ public class CinemachineEffect : MonoBehaviour
 
     public static CinemachineEffect Instance { get; private set; }
     CinemachineVirtualCamera CMCam;
+    GameObject player;
 
     private void Awake()
     {
         Instance = this;
         CMCam = GetComponent<CinemachineVirtualCamera>();
+        if(!player) player = GameObject.Find("Player");
+        CMCam.m_Follow = player.transform;
     }
     void Start()
     {

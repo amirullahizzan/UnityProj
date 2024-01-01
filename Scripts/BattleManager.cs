@@ -16,9 +16,8 @@ public class BattleManager : MonoBehaviour
     public CinemachineVirtualCamera BattleCMCamera;
     void Start()
     {
-        BattleUI_T = CanvasWorldGO.transform.Find("BattleUIGO");
-        CMCamera = GetComponent<CinemachineVirtualCamera>();
-        InitBattle();
+        //BattleUI_T = CanvasWorldGO.transform.Find("BattleUIGO");
+        //InitBattle();
     }
 
     // Update is called once per frame
@@ -37,21 +36,21 @@ public class BattleManager : MonoBehaviour
         //displayrandomencounter behind UI
     }
     
-    private Transform BattleUI_T;
     public GameObject player;
 
-    public Transform camPos;
-    public Transform enemyPos;
-    public Transform playerPos;
-    public Transform mobPos;
-    void InitBattle()
-    {
-        //isInBattle = true;
-        BattleCMCamera.enabled = true;
-        CMCamera.enabled = false; 
-        player.GetComponent<Transform>().transform.position = playerPos.position;
-        //if animation is done
-        BattleUI_T.gameObject.SetActive(true);
-    }
+    //private Transform BattleUI_T;
+    //public Transform camPos;
+    //public Transform enemyPos;
+    //public Transform playerPos;
+    //public Transform mobPos;
+    //void InitBattle()
+    //{
+    //    //isInBattle = true;
+    //    BattleCMCamera.enabled = true;
+    //    CMCamera.enabled = false; 
+    //    player.GetComponent<Transform>().transform.position = playerPos.position;
+    //    //if animation is done
+    //    BattleUI_T.gameObject.SetActive(true);
+    //}
 
 }

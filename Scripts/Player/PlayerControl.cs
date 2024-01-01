@@ -13,6 +13,10 @@ public class PlayerControl : MonoBehaviour
     Rigidbody rb;
     SpriteRenderer sprite;
     GameManager gamemanager;
+    
+    private void Awake()
+    {
+    }
     void Start()
     {
     rb = GetComponent<Rigidbody>();
